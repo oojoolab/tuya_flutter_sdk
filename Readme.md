@@ -1,6 +1,8 @@
-Tuya Flutter SDK
+# [Eng] Tuya Flutter SDK
 
-Although Tuya's SDK officially supports Android and iOS, there's currently no support for React-Native or Flutter. However, given the substantial demand for a Tuya Flutter SDK, I took it upon myself to develop one. This endeavor involved numerous trials and errors and tackling several issues not documented in Tuya's official documentation. Through this process, I managed to create a stable SDK, resolving specific problems for both Android and iOS before integrating everything into Flutter.
+![tuya_smart_logo.jpg](tuya_smart_logo.jpg)
+
+Although [Tuya's SDK](https://developer.tuya.com/en/docs/iot) officially supports Android and iOS, there's currently no support for React-Native or Flutter. However, given the substantial demand for a Tuya Flutter SDK, I took it upon myself to develop one. This endeavor involved numerous trials and errors and tackling several issues not documented in Tuya's official documentation. Through this process, I managed to create a stable SDK, resolving specific problems for both Android and iOS before integrating everything into Flutter.
 
 This development journey was fraught with challenges, but ultimately, it culminated in success. If anyone is interested in the Tuya Flutter SDK, I plan to sell it for a fee, roughly equivalent to the salary of a developer for a month.
 
