@@ -136,11 +136,9 @@ Camera control provides many features, including.
 
 ## Sign a contract
 
-
-- Display the Flutter project and example app by indicating the function you want to implement, Android package name, and bundle name. The production period is limited to 3 days and costs apply.
-    - The cost is equivalent to two weeks' salary for a developer
+- If you tell us the list of features you want and the package name, we will create it for you. Production time is within 3 business days, but costs will apply.
+    - The cost is equivalent to two weeks' salary of the developer.
+    - We provide SDK, Document, and Example App.
 - You can either outsource the Tuya Flutter project you want to work on, or hire me to work with you.
 - Please contact us at oojooteam@gmail.com
-
-
-Both the SDK and Example App are available. Please contact oojooteam@gmail.com to receive them.
+ 

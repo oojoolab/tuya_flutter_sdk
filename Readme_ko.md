@@ -163,8 +163,9 @@ void onActiveFailed(String message) {}
 
 ## 유료입니다
 
-- 구현하려는 기능, android package name, bundle name을 알려주시면 빌드가 가능한 Flutter Project와 Example App을 드립니다. 제작기간은 3 영업일 이내로 드리며, 비용이 발생합니다.
+- 원하는 기능 리스트와 패키지명을 말씀해주시면 제작해드립니다. 제작기간은 3 영업일 이내로 드리며, 비용이 발생합니다.
     - 비용은 개발자의 2주치 급여에 해당합니다.
+    - SDK, Document, Example App을 드립니다.
 - 진행하려는 Tuya Flutter Project에 외주를 주거나, 저를 고용하여 함께 일하는 형태도 가능합니다.
 - oojooteam@gmail.com 으로 연락주세요.
 
