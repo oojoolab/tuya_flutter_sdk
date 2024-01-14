@@ -3,18 +3,18 @@ This is an unofficial Flutter SDK for developing the Tuya Smart Life App. It pro
 
 ## Supported Platforms
 
----
+
 
 - Android
 - iOS
 ## Screenshots
----
+
 
 ![screenshot](screenshot.png)
 
 ## Supported Features
 
----
+
 It provides overall functionality for implementing the Tuya Smart IPC app, including:
 
 - User Account
@@ -24,19 +24,19 @@ It provides overall functionality for implementing the Tuya Smart IPC app, inclu
 - Control Specific Devices
 
 ## Documentation
----
+
 
 Detailed technical documentation is provided along with the source code.
 
 ## Example
 
----
+
 
 Here, we cover the basic usage.
 
 ### App Initialization
 
----
+
 
 ```dart
 TuyaSmartSdk homeSdk = TuyaSmartSdk();
@@ -50,7 +50,7 @@ homeSdk.initWithKey(
 - The Android key is configured to be read from the manifest.
 
 ### Request Verification Code (Email)
----
+
 
 ```dart
 TuyaSmartUser tuyaUser = TuyaSmartUser();
@@ -122,7 +122,7 @@ void onActiveFailed(String message) {}
 ```
 
 ### Camera Control
----
+
 Camera control provides many features, including.
 
 - `PreView` Play and stop the current recording video stream, take screenshots, save videos to the album, etc.
@@ -133,6 +133,6 @@ Camera control provides many features, including.
 - Audio conversation, and more.
 
 ## Example App
----
+
 
 Both the SDK and Example App are available. Please contact oojooteam@gmail.com to receive them.

@@ -4,20 +4,20 @@ Tuya Smart Life App 개발을 위한 비공식 Flutter SDK 입니다. Smart Life
 
 ## 지원되는 플랫폼
 
----
+
 
 - Android
 - iOS
 
 ## 스크린샷
 
----
+
 
 ![screenshot](screenshot.png)
 
 ## 지원하는 기능
 
----
+
 
 Tuya Smart IPC 앱 구현을 위한 전반적인 기능을 제공합니다. 
 
@@ -29,19 +29,19 @@ Tuya Smart IPC 앱 구현을 위한 전반적인 기능을 제공합니다.
 
 ## Document
 
----
+
 
 자세한 기술문서는 소스코드와 함께 제공됩니다.
 
 ## Example
 
----
+
 
 여기서는 기본적인 사용법을 다룹니다. 
 
 ### 앱 초기화
 
----
+
 
 ```dart
 TuyaSmartSdk homeSdk = TuyaSmartSdk();
@@ -56,7 +56,7 @@ homeSdk.initWithKey(
 
 ### 인증번호 요청 (이메일)
 
----
+
 
 ```dart
 TuyaSmartUser tuyaUser = TuyaSmartUser();
@@ -70,7 +70,7 @@ await tuyaUser.sendVerifyCodeWithEmail(
 
 ### 인증번호 인증 (이메일)
 
----
+
 
 ```dart
 TuyaSmartUser tuyaUser = TuyaSmartUser();
@@ -85,7 +85,7 @@ await tuyaUser.checkCodeWithEmail(
 
 ### 회원가입
 
----
+
 
 ```dart
 TuyaSmartUser tuyaUser = TuyaSmartUser();
@@ -94,7 +94,7 @@ await tuyaUser.registerWithEmail("82", user.email, user.password, code);
 
 ### 로그인
 
----
+
 
 ```dart
 TuyaSmartUser tuyaUser = TuyaSmartUser();
@@ -103,7 +103,7 @@ await tuyaUser.loginWithEmail("82", user.email, user.password);
 
 ### Home 리스트
 
----
+
 
 ```dart
 TuyaSmartHomeManager tuyaHomeManager = TuyaSmartHomeManager();
@@ -112,7 +112,7 @@ List<HomeBean> list = await tuyaHomeManager.getHomeList();
 
 ### Home 상세
 
----
+
 
 ```dart
 TuyaSmartHome tuyaHome = TuyaSmartHome();
@@ -121,7 +121,7 @@ HomeBean home = await tuyaHome.getHomeDetail(homeId); // homeId is int
 
 ### 카메라 페어링
 
----
+
 
 ```dart
 TuyaSmartActivator activator = TuyaSmartActivator();
@@ -147,7 +147,7 @@ void onActiveFailed(String message) {}
 
 ### 카메라 조작
 
----
+
 
 카메라 조작에는 많은 기능들이 제공됩니다. 제공되는 기능은 아래와 같습니다.
 
@@ -162,6 +162,6 @@ void onActiveFailed(String message) {}
 
 ## Example App
 
----
+
 
 SDK, Example App 은 모두 제공합니다. 제공받기 위해서는 oojooteam@gmail.com 으로 연락주세요.
