@@ -1,4 +1,4 @@
-# Tuya Flutter SDK (1)
+# Tuya Flutter SDK 
 This is an unofficial Flutter SDK for developing the Tuya Smart Life App. It provides overall functionality for Smart Life App development, and additional features can be added upon request if needed.
 
 ## Supported Platforms
