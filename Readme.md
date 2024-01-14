@@ -141,5 +141,4 @@ Camera control provides many features, including.
     - We provide SDK, Document, and Example App.
 - You can either outsource the Tuya Flutter project you want to work on, or hire me to work with you.
 - Please refer to my [resume](https://historical-trader-da4.notion.site/oojoo-f4829b4e06b84d81905c7e384a4f0ed2?pvs=4) and contact me at oojooteam@gmail.com
-- Please contact us at oojooteam@gmail.com
  
