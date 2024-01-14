@@ -128,11 +128,19 @@ Camera control provides many features, including.
 - `PreView` Play and stop the current recording video stream, take screenshots, save videos to the album, etc.
 - `Playback` Play, stop, resume, pause recorded videos, and view videos from specific dates.
 - `Download` Download recorded videos.
-- Move camera up, down, left, and right.
-- Camera flip.
-- Audio conversation, and more.
+- Up, down, left, right camera movement
+- Flip camera left and right
+- Change camera quality
+- Audio dialogue
+- sdcard information and settings, etc.
 
-## Example App
+## Sign a contract
+
+
+- Display the Flutter project and example app by indicating the function you want to implement, Android package name, and bundle name. The production period is limited to 3 days and costs apply.
+    - The cost is equivalent to 2 weeks worth of trademark for the developer.
+- You can either outsource the Tuya Flutter project you want to work on, or hire me to work with you.
+- Please contact us at oojooteam@gmail.com
 
 
 Both the SDK and Example App are available. Please contact oojooteam@gmail.com to receive them.
