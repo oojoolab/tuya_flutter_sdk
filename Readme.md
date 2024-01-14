@@ -80,13 +80,13 @@ TuyaSmartUser tuyaUser = TuyaSmartUser();
 await tuyaUser.registerWithEmail("82", user.email, user.password, code);
 ```
 
-###Login
+### Login
 ```dart
 TuyaSmartUser tuyaUser = TuyaSmartUser();
 await tuyaUser.loginWithEmail("82", user.email, user.password);
 ```
 
-###Home List
+### Home List
 ```dart
 TuyaSmartHomeManager tuyaHomeManager = TuyaSmartHomeManager();
 List<HomeBean> list = await tuyaHomeManager.getHomeList();
