@@ -13,7 +13,7 @@ Tuya Smart Life App 개발을 위한 비공식 Flutter SDK 입니다. Smart Life
 
 
 
-![screenshot](screenshot.png)
+![screenshot](screenshot2.png)
 
 ## 지원하는 기능
 

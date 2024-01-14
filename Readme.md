@@ -10,7 +10,7 @@ This is an unofficial Flutter SDK for developing the Tuya Smart Life App. It pro
 ## Screenshots
 
 
-![screenshot](screenshot.png)
+![screenshot](screenshot2.png)
 
 ## Supported Features
 
