@@ -167,7 +167,7 @@ void onActiveFailed(String message) {}
     - 비용은 개발자의 2주치 급여에 해당합니다.
     - SDK, Document, Example App을 드립니다.
 - 진행하려는 Tuya Flutter Project에 외주를 주거나, 저를 고용하여 함께 일하는 형태도 가능합니다.
-- oojooteam@gmail.com 으로 연락주세요.
+- [이력서](https://www.notion.so/oojoo-aa3e3a92789041f0ae0dd53094bf7edf?pvs=21)를 참고하시고, oojooteam@gmail.com 으로 연락주세요.
 
 
 
