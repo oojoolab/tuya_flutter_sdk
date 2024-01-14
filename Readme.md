@@ -1,94 +1,138 @@
-# [Eng] Tuya Flutter SDK
+# Tuya Flutter SDK (1)
+This is an unofficial Flutter SDK for developing the Tuya Smart Life App. It provides overall functionality for Smart Life App development, and additional features can be added upon request if needed.
 
-![tuya_smart_logo.jpg](tuya_smart_logo.jpg)
-
-Although [Tuya's SDK](https://developer.tuya.com/en/docs/iot) officially supports Android and iOS, there's currently no support for React-Native or Flutter. However, given the substantial demand for a Tuya Flutter SDK, I took it upon myself to develop one. This endeavor involved numerous trials and errors and tackling several issues not documented in Tuya's official documentation. Through this process, I managed to create a stable SDK, resolving specific problems for both Android and iOS before integrating everything into Flutter.
-
-This development journey was fraught with challenges, but ultimately, it culminated in success. If anyone is interested in the Tuya Flutter SDK, I plan to sell it for a fee, roughly equivalent to the salary of a developer for a month.
-
-I ask that the effort invested in this project be appreciated, as it is an attempt to gain due compensation for the developer's hard work.
-
-### Features Offered in the Flutter SDK
+## Supported Platforms
 
 ---
 
-- `TuyaSmartSdk`
-    - `init`
-        
-        
-    - `setDebugMode`
-- `TuyaSmartActivator`
-    - `getActivatorToken`
-    - `startConfigWiFi`
-        - `onQRCodeSuccess`
-        - `onActiveSuccess`
-        - `onActiveFailed`
-    - `stopConfigWiFi`
-- `TuyaSmartCamera`
-    - `getCameraInstance`
-    - `connect`
-    - `disConnect`
-    - `isConnecting`
-    - `publishDps`
-    - `queryRecordDaysByMonth`
-    - `queryRecordTimeSliceByDay`
-    - `getDayKey`
-    - `getMonthKey`
-    - `getMute`
-    - `setMute`
-    - `snapshot`
-    - `setLoudSpeakerStatus`
-    - `startPreview`
-    - `stopPreview`
-    - `setVideoClarity`
-    - `startPlayBack`
-    - `stopPlayBack`
-    - `pausePlayBack`
-    - `resumePlayBack`
-    - `setPlayBackSpeed`
-    - `startRecordLocalMp4`
-    - `stopRecordLocalMp4`
-    - `isRecording`
-    - `startPlayBackDownload`
-    - `stopPlayBackDownload`
-    - `pausePlayBackDownload`
-    - `resumePlayBackDownload`
-    - `startAudioTalk`
-    - `stopAudioTalk`
-    - `isTalking`
-    - `removeDevice`
-    - `dispose`
-- `TuyaSmartHome`
-    - `getHomeDetail`
-- `TuyaSmartHomeDataManager`
-    - `queryValueByDPID`
-- `TuyaSmartHomeManager`
-    - `createHome`
-    - `getHomeList`
-- `TuyaSmartUser`
-    - `sendVerifyCodeWithEmail`
-    - `registerWithEmail`
-    - `registerWithPhone`
-    - `switchUserRegion`
-    - `loginWithEmail`
-    - `logout`
+- Android
+- iOS
+## Screenshots
+---
 
-### Collaborative Enhancement: Tailoring the SDK to Your Project's Needs
+![screenshot](screenshot.png)
+
+## Supported Features
+
+---
+It provides overall functionality for implementing the Tuya Smart IPC app, including:
+
+- User Account
+- Home Management
+- Device Pairing
+- Device Management
+- Control Specific Devices
+
+## Documentation
+---
+
+Detailed technical documentation is provided along with the source code.
+
+## Example
 
 ---
 
-I already possess the SDK, but it may lack certain features you desire, necessitating a collaboration where you hire me for a month. I am capable of further enhancing the SDK to ensure the successful completion of your project.
+Here, we cover the basic usage.
 
-### Proposal Request: Estimation Based on Senior Developer's Monthly Salary
-
----
-
-Please propose an initial estimate based on the monthly salary of a senior developer. I will then assess the appropriateness of your offer and check my schedule before responding.
-
-### Contact Me
+### App Initialization
 
 ---
 
-If you're interested in this tailored approach to enhancing the SDK for your specific project needs, please don't hesitate to contact me. Let's collaborate to ensure the success of your project.
+```dart
+TuyaSmartSdk homeSdk = TuyaSmartSdk();
+homeSdk.initWithKey(
+    'x4ehq5med3qg3dkmu3d5',
+    '4h59f5uu99w79mckmf9m7dptgdtntt5x'
+); // iOS app Key, secret
+```
 
-email: oojooteam@gmail.com
+- In the above code, only the iOS key is set.
+- The Android key is configured to be read from the manifest.
+
+### Request Verification Code (Email)
+---
+
+```dart
+TuyaSmartUser tuyaUser = TuyaSmartUser();
+await tuyaUser.sendVerifyCodeWithEmail(
+    user.email, 
+    user.region, 
+    "82",
+    TuyaSmartUserEmailType.VERIFICATION_LOGIN
+);
+```
+
+### Verify Verification Code (Email)
+```dart
+TuyaSmartUser tuyaUser = TuyaSmartUser();
+await tuyaUser.checkCodeWithEmail(
+    user.email, 
+    user.region, 
+    "82",
+    code, // The verification code received via email 
+    TuyaSmartUserEmailType.VERIFICATION_LOGIN
+);
+```
+
+### Register
+```dart
+TuyaSmartUser tuyaUser = TuyaSmartUser();
+await tuyaUser.registerWithEmail("82", user.email, user.password, code);
+```
+
+###Login
+```dart
+TuyaSmartUser tuyaUser = TuyaSmartUser();
+await tuyaUser.loginWithEmail("82", user.email, user.password);
+```
+
+###Home List
+```dart
+TuyaSmartHomeManager tuyaHomeManager = TuyaSmartHomeManager();
+List<HomeBean> list = await tuyaHomeManager.getHomeList();
+```
+
+### Home Details
+```dart
+TuyaSmartHome tuyaHome = TuyaSmartHome();
+HomeBean home = await tuyaHome.getHomeDetail(homeId); // homeId is int
+```
+
+### Camera Pairing
+```dart
+TuyaSmartActivator activator = TuyaSmartActivator();
+String token = await activator.getActivatorToken(homeId);
+activator.startConfigWiFi(
+      TYActivatorMode.TYActivatorModeQRCode,
+      ssid,
+      password,
+      token,
+      100,
+    );
+// To stop pairing, use activator.stopConfigWiFi();
+```
+
+- Cameras are paired using QR codes. Android or iOS generates QR information from the currently connected Wi-Fi information, and the camera pairs by reading the QR code. The above process is provided as an example.
+- Callback functions received through TuyaSmartCameraActivatorListener are as follows:
+
+```dart
+void onQRCodeSuccess(String qrcodeUrl) {}
+void onActiveSuccess(DeviceBean deviceBean) {} 
+void onActiveFailed(String message) {}
+```
+
+### Camera Control
+---
+Camera control provides many features, including.
+
+- `PreView` Play and stop the current recording video stream, take screenshots, save videos to the album, etc.
+- `Playback` Play, stop, resume, pause recorded videos, and view videos from specific dates.
+- `Download` Download recorded videos.
+- Move camera up, down, left, and right.
+- Camera flip.
+- Audio conversation, and more.
+
+## Example App
+---
+
+Both the SDK and Example App are available. Please contact oojooteam@gmail.com to receive them.
